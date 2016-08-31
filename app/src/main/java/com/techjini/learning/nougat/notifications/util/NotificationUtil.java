@@ -38,6 +38,18 @@ public class NotificationUtil {
     public void showCustomContentViewNotification(Context context) {
     }
 
+    //TODO
+    public void showCustomBothContentViewNotification(Context context) {
+    }
+
+    //TODO
+    public void showStandardHeadsUpNotification(Context context) {
+    }
+
+    //TODO
+    public void showCustomLayoutHeadsUpNotification(Context context) {
+    }
+
 
     private RemoteViews createRemoteViews(Context context, int layout, int iconResource,
                                           String title, String message, int imageResource) {

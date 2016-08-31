@@ -40,6 +40,19 @@ public class MainActivity extends AppCompatActivity {
         mNotificationUtil.showCustomContentViewNotification(this);
     }
 
-    //seethalakshmisoman
-    //Seetha_1990
+    @OnClick(R.id.button_custom_normal_and_big_content_views_notification)
+    public void onButtonCustomNormalAndBigContentViewsNotification() {
+        mNotificationUtil.showCustomBothContentViewNotification(this);
+    }
+
+    @OnClick(R.id.button_heads_up_notification)
+    public void onButtonHeadsUpNotificationClick() {
+        mNotificationUtil.showStandardHeadsUpNotification(this);
+    }
+
+    @OnClick(R.id.button_custom_layout_heads_up_notification)
+    public void onButtonCustomLayoutHeadsUpNotificationClick() {
+        mNotificationUtil.showCustomLayoutHeadsUpNotification(this);
+    }
+
 }
