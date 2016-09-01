@@ -18,6 +18,16 @@ public class NotificationUtil {
     public static final String REPLY_ACTION = "com.techjini.learning.nougat.notifications.util.ACTION_MESSAGE_REPLY";
     public static final String KEY_PRESSED_ACTION = "KEY_PRESSED_ACTION";
 
+    public static final int REPLY_INTENT_ID = 0;
+    public static final int ARCHIVE_INTENT_ID = 1;
+
+    public static final int REMOTE_INPUT_ID = 1247;
+
+    public static final String LABEL_REPLY = "Reply";
+    public static final String LABEL_ARCHIVE = "Archive";
+    public static final String KEY_TEXT_REPLY = "KEY_TEXT_REPLY";
+    private static final String KEY_NOTIFICATION_GROUP = "KEY_NOTIFICATION_GROUP";
+
 
     public void showStandardNotification(Context context) {
         NotificationCompat.Builder notification = createNotificationBuider(context,
@@ -80,18 +90,9 @@ public class NotificationUtil {
                 .setAutoCancel(true);
     }
 
-    private Intent getMessageReplyIntent(String label) {
-        return new Intent()
-                .addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES)
-                .setAction(REPLY_ACTION)
-                .putExtra(KEY_PRESSED_ACTION, label);
-    }
-
     private void showNotification(Context context, Notification notification, int id) {
         NotificationManager mNotificationManager =
                 (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         mNotificationManager.notify(id, notification);
     }
-
-    //
 }
